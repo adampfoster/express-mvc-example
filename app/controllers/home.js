@@ -14,15 +14,3 @@ exports.index = function (req, res){
 		articles: Articles.articles
 	});
 };
-
-exports.clients = function (req, res){
-	res.render('home/index', {
-		clients: ClientModel.clients
-	});
-};
-
-exports.services = function (req, res){
-	res.render('home/index', {
-		services: ServiceModel.services
-	});
-};
