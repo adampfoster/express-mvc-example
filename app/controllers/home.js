@@ -8,7 +8,7 @@ exports.index = function (req, res){
 		if(err) throw new Error(err);
 	});
 	res.render('home/index', {
-		title: 'Wotif',
+		title: 'Business, Inc',
 		services: ServiceModel.services,
 		clients: ClientModel.clients,
 		articles: Articles.articles
