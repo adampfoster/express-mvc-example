@@ -4,7 +4,7 @@ var mongoose 		= require('mongoose'),
 	ClientModel		= require('../models/clients');
 
 exports.index = function (req, res){
-	var Articles = exports.Articles = ArticleModel.find(function (err, articles){
+	var Articles = ArticleModel.find(function (err, articles){
 		if(err) throw new Error(err);
 	});
 	res.render('home/index', {
