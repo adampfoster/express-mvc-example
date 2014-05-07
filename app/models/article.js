@@ -15,7 +15,3 @@ ArticleSchema.virtual('date')
   });
 
 mongoose.model('Article', ArticleSchema);
-
-var Articles = exports.Articles = ArticleModel.find(function (err, articles){
-			if(err) throw new Error(err);
-		});

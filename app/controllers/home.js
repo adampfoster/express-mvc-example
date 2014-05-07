@@ -4,11 +4,14 @@ var mongoose 		= require('mongoose'),
 	ClientModel		= require('../models/clients');
 
 exports.index = function (req, res){
+	var Articles = exports.Articles = ArticleModel.find(function (err, articles){
+		if(err) throw new Error(err);
+	});
 	res.render('home/index', {
 		title: 'Wotif',
 		services: ServiceModel.services,
 		clients: ClientModel.clients,
-		articles: articles
+		articles: Articles.articles
 	});
 };
 
